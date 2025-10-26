@@ -1,9 +1,6 @@
 ---
-import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
-
-const pageTitle = "ホームページ";
 ---
 
 <html lang="en">
@@ -12,12 +9,11 @@ const pageTitle = "ホームページ";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>Astro</title>
   </head>
   <body>
-    <Navigation />
-
-    <h1>{pageTitle}</h1>
-    <Footer />
+    <Navigation>
+      <h1>はじめてのAstro</h1>
+    </Navigation>
   </body>
 </html>
