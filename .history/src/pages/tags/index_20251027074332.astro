@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const allPosts = Object.values(import.meta.glob("../posts/*.md"));
+const tags = [
+  "astro",
+  "ブログ",
+  "公開学習",
+  "成功",
+  "つまずき",
+  "コミュニティー",
+];
+const pageTitle = "タグインデックス";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <ul>
+    {tags.map((tag) => <li>{tag}</li>)}
+  </ul>
+</BaseLayout>
